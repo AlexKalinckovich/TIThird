@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "TIThird/1.0.0": {
+        "dependencies": {
+          "MaterialDesignThemes": "5.2.2-ci942"
+        },
+        "runtime": {
+          "TIThird.dll": {}
+        }
+      },
+      "MaterialDesignColors/5.2.2-ci942": {
+        "runtime": {
+          "lib/net8.0/MaterialDesignColors.dll": {
+            "assemblyVersion": "5.2.2.0",
+            "fileVersion": "5.2.2.0"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.2.2-ci942": {
+        "dependencies": {
+          "MaterialDesignColors": "5.2.2-ci942",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "runtime": {
+          "lib/net8.0/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "5.2.2.0",
+            "fileVersion": "5.2.2.0"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "runtime": {
+          "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.39.4716"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TIThird/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaterialDesignColors/5.2.2-ci942": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z+aaJnexsTS39YvsfNYM22FjzWPBooRH35zx3lO3YLI8+toJOy8wCVTuCqbszxAIEdorzLKbEV20fNCE1Elhzw==",
+      "path": "materialdesigncolors/5.2.2-ci942",
+      "hashPath": "materialdesigncolors.5.2.2-ci942.nupkg.sha512"
+    },
+    "MaterialDesignThemes/5.2.2-ci942": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4AMMMD3Xxr5ja4pw5W+fTwN0+T5PEwZfBK2JBLU2AUN9/imqr13H9qVH1y6VpfbIC49hM/N+aO956Ph9vwkAzA==",
+      "path": "materialdesignthemes/5.2.2-ci942",
+      "hashPath": "materialdesignthemes.5.2.2-ci942.nupkg.sha512"
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8PZKqw9QOcu42xk8puY4P1+EXHL9YGOR9b7qhaYx5cILHul456H073tj99vyPcCt0W0781T9RwHqkx507ZyUpQ==",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.39",
+      "hashPath": "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+    }
+  }
+}

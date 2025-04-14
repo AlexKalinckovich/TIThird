@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "x/BwGu9jGIE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\brota\\RiderProjects\\TIThird\\TIThird\\TIThird.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\brota\\.nuget\\packages\\materialdesigncolors\\5.2.2-ci942\\materialdesigncolors.5.2.2-ci942.nupkg.sha512",
+    "C:\\Users\\brota\\.nuget\\packages\\materialdesignthemes\\5.2.2-ci942\\materialdesignthemes.5.2.2-ci942.nupkg.sha512",
+    "C:\\Users\\brota\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

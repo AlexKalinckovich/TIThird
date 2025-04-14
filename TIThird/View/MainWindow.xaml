@@ -1,0 +1,114 @@
+﻿<Window x:Class="TIThird.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+<Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Parameters Section -->
+        <GroupBox Grid.Row="0" Header="Параметры шифрования" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Input Fields -->
+                <StackPanel Grid.Column="0" Margin="5">
+                    <TextBlock Text="Простое число p:"/>
+                    <TextBox x:Name="TxtP" ToolTip="Введите простое число"/>
+                    <TextBlock Text="Секретный ключ x:" Margin="0,10,0,0"/>
+                    <TextBox x:Name="TxtX"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="5">
+                    <TextBlock Text="Случайное число k:"/>
+                    <TextBox x:Name="TxtK"/>
+                    <Button x:Name="BtnFindRoots" Content="Найти корни" 
+                            Margin="0,25,0,0" Click="BtnFindRoots_Click"/>
+                </StackPanel>
+
+                <!-- Primitive Roots List -->
+                <StackPanel Grid.Column="2" Margin="5">
+                    <TextBlock Text="Первообразные корни:"/>
+                    <ListBox x:Name="LstPrimitiveRoots" Height="100" 
+                           SelectionChanged="LstPrimitiveRoots_SelectionChanged"/>
+                </StackPanel>
+
+                <!-- Status Indicators -->
+                <StackPanel Grid.Column="3" Margin="10,0,0,0">
+                    <TextBlock x:Name="TbPrimeStatus" Foreground="Red"/>
+                    <ProgressBar x:Name="PbCalculation" Height="20" Width="150"
+                               IsIndeterminate="False" Visibility="Collapsed"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <!-- File Operations Section -->
+        <GroupBox Grid.Row="2" Header="Операции с файлами" Padding="10" Height="250">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <Label Content="Входной файл"/>
+                    <TextBox x:Name="TxtInputFilePath" Width="200" Margin="5"
+                             IsReadOnly="True"/>
+                    <Button Name="BtnInputFile" Content="Выбрать файл" Click="BtnInputFile_OnClick" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Content="Выходной файл"/>
+                    <TextBox x:Name="TxtOutputFilePath" Width="200" Margin="5"
+                             IsReadOnly="True"/>
+                    <Button Name="BtnOutputFile" Content="Выбрать файл" Click="BtnOutputFile_OnClick" Margin="5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+                    <Button Name="BtnEncrypt" Content="Зашифровать" Width="120" Margin="5"
+                            Click="BtnEncrypt_Click"/>
+                    <Button Name="BtnDecrypt" Content="Расшифровать" Width="120" Margin="5"
+                            Click="BtnDecrypt_Click"/>
+                    <TextBlock Text="Статус:" Margin="5"/>
+                    <TextBlock x:Name="TbOperationStatus" Margin="5"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <!-- Data Display Section with Splitter -->
+        <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" Background="Gray"/>
+        
+        <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" Background="Gray"/>
+
+        <!-- Results Section -->
+        <TabControl Grid.Row="4" Margin="5">
+            <TabItem Header="Шифр-текст">
+                <TextBox x:Name="TxtCipherText" IsReadOnly="True" 
+                        VerticalScrollBarVisibility="Auto"
+                        FontFamily="Consolas" TextWrapping="Wrap"/>
+            </TabItem>
+            <TabItem Header="Информация">
+                <StackPanel>
+                    <TextBlock x:Name="TbPublicKey" Margin="5"/>
+                    <TextBlock x:Name="TbSelectedRoot" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
