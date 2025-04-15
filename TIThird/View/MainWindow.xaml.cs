@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.ObjectModel;
+using System.IO;
 using System.Numerics;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ public partial class MainWindow
 {
     private readonly EncryptionEngine _engine = new();
     private readonly DecryptionEngine _decryptionEngine = new();
+    public static ObservableCollection<AbEntry> AbEntries { get; set; } = new();
     private BigInteger _selectedRoot = BigInteger.MinusOne;
     private BigInteger _lastPValue = BigInteger.MinusOne;
     private BigInteger _lastKValue = BigInteger.MinusOne;
@@ -22,10 +24,12 @@ public partial class MainWindow
     public MainWindow()
     {
         InitializeComponent();
+        AbDataGrid.ItemsSource = AbEntries;
     }
 
     private async void BtnEncrypt_Click(object sender, RoutedEventArgs e)
     {
+        AbEntries.Clear();
         try
         {
             if (!ValidateParameters() || !ValidateFile())
@@ -40,12 +44,12 @@ public partial class MainWindow
                 _lastKValue,
                 _lastXValue,
                 _selectedRoot);
-
+            
             UpdateStatus("Файл успешно зашифрован!");
         }
         catch (Exception ex)
         {
-            ShowError($"Ошибка: {ex.Message}");
+            MessageBox.Show("Данный файл не может быть расшифрован с данными входными значениями!");
         }
         finally
         {
@@ -114,6 +118,10 @@ public partial class MainWindow
         {
             isPValueValid = DataValidator.IsPValid(TxtP.Text, out _lastPValue);
         }
+        catch (OutOfBoundsException)
+        {
+            MessageBox.Show("Значение P должно быть больше 256");
+        }
         catch (ValueNotPrimeException)
         {
             MessageBox.Show("Значение P должно быть простым числом!");
@@ -158,7 +166,6 @@ public partial class MainWindow
         if (LstPrimitiveRoots.SelectedItem is BigInteger root)
         {
             _selectedRoot = root;
-            TbSelectedRoot.Text = $"Выбран корень: {root}";
         }
     }
 

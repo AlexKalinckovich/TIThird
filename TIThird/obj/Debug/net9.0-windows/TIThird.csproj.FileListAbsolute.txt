@@ -22,3 +22,4 @@ C:\Users\brota\RiderProjects\TIThird\TIThird\obj\Debug\net9.0-windows\ref\TIThir
 C:\Users\brota\RiderProjects\TIThird\TIThird\obj\Debug\net9.0-windows\View\MainWindow.baml
 C:\Users\brota\RiderProjects\TIThird\TIThird\obj\Debug\net9.0-windows\View\MainWindow.g.cs
 C:\Users\brota\RiderProjects\TIThird\TIThird\obj\Debug\net9.0-windows\App\App.g.cs
+C:\Users\brota\RiderProjects\TIThird\TIThird\obj\Debug\net9.0-windows\TIThird.sourcelink.json

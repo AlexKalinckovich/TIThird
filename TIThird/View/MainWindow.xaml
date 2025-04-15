@@ -6,12 +6,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-<Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="5"/>
-            <RowDefinition Height="2*"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/> <!-- Параметры -->
+            <RowDefinition Height="5"/> <!-- Сплиттер -->
+            <RowDefinition Height="2*"/> <!-- Операции с файлами -->
         </Grid.RowDefinitions>
 
         <!-- Parameters Section -->
@@ -56,12 +54,13 @@
         </GroupBox>
 
         <!-- File Operations Section -->
-        <GroupBox Grid.Row="2" Header="Операции с файлами" Padding="10" Height="250">
+        <GroupBox Grid.Row="2" Header="Операции с файлами" Padding="10">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Orientation="Horizontal">
@@ -79,36 +78,33 @@
                 </StackPanel>
 
                 <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
-                    <Button Name="BtnEncrypt" Content="Зашифровать" Width="120" Margin="5"
-                            Click="BtnEncrypt_Click"/>
-                    <Button Name="BtnDecrypt" Content="Расшифровать" Width="120" Margin="5"
-                            Click="BtnDecrypt_Click"/>
-                    <TextBlock Text="Статус:" Margin="5"/>
-                    <TextBlock x:Name="TbOperationStatus" Margin="5"/>
+                    <Button Name="BtnEncrypt" Content="Зашифровать" Width="120" Margin="5" Click="BtnEncrypt_Click"/>
+                    <Button Name="BtnDecrypt" Content="Расшифровать" Width="120" Margin="5" Click="BtnDecrypt_Click"/>
+
+                    <TextBlock Text="Статус:" Margin="5" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="TbOperationStatus" Margin="5" VerticalAlignment="Center"/>
                 </StackPanel>
+
+                <!-- Таблица для отображения значений a и b -->
+                <DataGrid Grid.Row="3" x:Name="AbDataGrid" Margin="0,10,0,0"
+                          AutoGenerateColumns="False"
+                          HeadersVisibility="Column"
+                          IsReadOnly="True"
+                          VerticalAlignment="Stretch">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Index" Binding="{Binding Index}" Width="Auto"/>
+                        <DataGridTextColumn Header="a" Binding="{Binding A}" Width="*"/>
+                        <DataGridTextColumn Header="b" Binding="{Binding B}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
             </Grid>
         </GroupBox>
+
 
         <!-- Data Display Section with Splitter -->
         <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" 
                     VerticalAlignment="Stretch" Background="Gray"/>
         
-        <GridSplitter Grid.Row="3" HorizontalAlignment="Stretch" 
-                    VerticalAlignment="Stretch" Background="Gray"/>
-
-        <!-- Results Section -->
-        <TabControl Grid.Row="4" Margin="5">
-            <TabItem Header="Шифр-текст">
-                <TextBox x:Name="TxtCipherText" IsReadOnly="True" 
-                        VerticalScrollBarVisibility="Auto"
-                        FontFamily="Consolas" TextWrapping="Wrap"/>
-            </TabItem>
-            <TabItem Header="Информация">
-                <StackPanel>
-                    <TextBlock x:Name="TbPublicKey" Margin="5"/>
-                    <TextBlock x:Name="TbSelectedRoot" Margin="5"/>
-                </StackPanel>
-            </TabItem>
-        </TabControl>
     </Grid>
 </Window>

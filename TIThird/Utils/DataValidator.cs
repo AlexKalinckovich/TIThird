@@ -6,9 +6,11 @@ namespace TIThird.Utils;
 public class DataValidator
 {
     private DataValidator() { }
-
+    
+    
     public static bool IsPValid(string p, out BigInteger pNumberValue)
     {
+        const int minPNumberValue = 256;
         if (!BigInteger.TryParse(p, out BigInteger pNumber))
         {
             pNumberValue = BigInteger.MinusOne;
@@ -16,6 +18,11 @@ public class DataValidator
         }
         pNumberValue = pNumber;
 
+        if (pNumberValue < minPNumberValue)
+        {
+            throw new OutOfBoundsException();
+        }
+        
         if (!MathEngine.IsPrime(pNumberValue))
         {
             throw new ValueNotPrimeException();

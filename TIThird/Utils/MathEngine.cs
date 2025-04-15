@@ -178,9 +178,8 @@ public class MathEngine
         BigInteger gcd = BigInteger.GreatestCommonDivisor(a, mod);
         if (gcd != 1)
             throw new ArgumentException("Обратный элемент не существует.");
-    
-        BigInteger x, y;
-        ExtendedEuclidean(a, mod, out x, out y);
+
+        ExtendedEuclidean(a, mod, out BigInteger x, out _);
         return (x % mod + mod) % mod;
     }
 

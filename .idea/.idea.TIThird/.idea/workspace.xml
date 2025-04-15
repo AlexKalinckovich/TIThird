@@ -7,14 +7,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="411fa9d1-323b-478e-af52-070d6bb3907c" name="Changes" comment="" />
+    <list default="true" id="411fa9d1-323b-478e-af52-070d6bb3907c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TIThird/Utils/AbEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TIThird/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TIThird/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/Utils/DataValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/Utils/DataValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/Utils/DecryptionEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/Utils/DecryptionEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/Utils/EncryptionEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/Utils/EncryptionEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/Utils/MathEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/Utils/MathEngine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/View/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/View/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/bin/Debug/net9.0-windows/TIThird.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/bin/Debug/net9.0-windows/TIThird.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/bin/Debug/net9.0-windows/TIThird.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/bin/Debug/net9.0-windows/TIThird.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/bin/Debug/net9.0-windows/TIThird.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/bin/Debug/net9.0-windows/TIThird.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/TIThird_MarkupCompile.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/View/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/View/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/View/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/View/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/ref/TIThird.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/ref/TIThird.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/refint/TIThird.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TIThird/obj/Debug/net9.0-windows/refint/TIThird.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlexKalinckovich&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlexKalinckovich/TIThird.git&quot;,
+    &quot;accountId&quot;: &quot;920d9e16-fa17-4989-a6c5-fa402afbec58&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18ba87b21cbf48fdafa8fe28457a04b2f5a918/a6/48a1d4b6/TextBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18ba87b21cbf48fdafa8fe28457a04b2f5a918/ae/66ea78bd/ItemCollection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/24/6de3512d/ExecutionContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/29/c3a3f97c/Array.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a6b7f037ba7b44df80b8d3aa7e58eeb2e8e938/86/360a506e/Task.cs" root0="FORCE_HIGHLIGHTING" />
@@ -30,18 +72,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.TIThird.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.TIThird.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TIThird" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -84,7 +128,9 @@
       <workItem from="1743757433679" duration="115000" />
       <workItem from="1744455268389" duration="8160000" />
       <workItem from="1744490583746" duration="1744000" />
-      <workItem from="1744647622255" duration="3016000" />
+      <workItem from="1744647622255" duration="9237000" />
+      <workItem from="1744660669110" duration="3289000" />
+      <workItem from="1744726635220" duration="6166000" />
     </task>
     <servers />
   </component>
@@ -94,5 +140,24 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TIThird/Utils/MathEngine.cs</url>
+          <line>132</line>
+          <properties documentPath="C:\Users\brota\RiderProjects\TIThird\TIThird\Utils\MathEngine.cs" containingFunctionPresentation="Method 'FindPrimitivesRoots'">
+            <startOffsets>
+              <option value="3978" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4040" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

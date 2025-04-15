@@ -1,59 +1,58 @@
-using System.Numerics;
+using System.Globalization;
 using System.IO;
+using System.Numerics;
+using System.Threading.Tasks;
 
-namespace TIThird.Utils;
-
-public class DecryptionEngine
+namespace TIThird.Utils
 {
-    private int _blockSize;
-
-    public async Task DecryptFileAsync(
-        string inputPath,
-        string outputPath,
-        BigInteger p,
-        BigInteger x)
+    public class DecryptionEngine
     {
-        _blockSize = GetPaddedSize(p);
-
-        await using var inputStream = File.OpenRead(inputPath);
-        await using var outputStream = File.Create(outputPath);
-
-        byte[] buffer = new byte[_blockSize * 2];
-        int bytesRead;
-
-        while ((bytesRead = await inputStream.ReadAsync(buffer.AsMemory(0, buffer.Length))) == buffer.Length)
+        public async Task DecryptFileAsync(
+            string inputPath,
+            string outputPath,
+            BigInteger p,
+            BigInteger x) 
         {
-            byte[] aBytes = new byte[_blockSize];
-            byte[] bBytes = new byte[_blockSize];
+            // Всегда вычисляем размер блока через GetPaddedSize(p)
+            int blockSize = GetPaddedSize(p);
+            int totalBlockSize = blockSize * 2;
+            await using var inputStream = File.OpenRead(inputPath);
+            await using var outputStream = File.Create(outputPath);
+            
+            byte[] buffer = new byte[totalBlockSize];
+            int bytesRead;
+            while ((bytesRead = await inputStream.ReadAsync(buffer.AsMemory(0, totalBlockSize))) == totalBlockSize)
+            {
+                if (bytesRead < buffer.Length)
+                {
+                    Array.Clear(buffer, bytesRead, buffer.Length - bytesRead);
+                }
+                
+                byte[] aBytes = new byte[blockSize];
+                byte[] bBytes = new byte[blockSize];
+                
+                Buffer.BlockCopy(buffer, 0, aBytes, 0, blockSize);
+                Buffer.BlockCopy(buffer, blockSize, bBytes, 0, blockSize);
 
-            Buffer.BlockCopy(buffer, 0, aBytes, 0, _blockSize);
-            Buffer.BlockCopy(buffer, _blockSize, bBytes, 0, _blockSize);
+                BigInteger a = new BigInteger(aBytes, isUnsigned: true, isBigEndian: false);
+                BigInteger b = new BigInteger(bBytes, isUnsigned: true, isBigEndian: false);
 
-            BigInteger a = new BigInteger(aBytes, isUnsigned: true, isBigEndian: false);
-            BigInteger b = new BigInteger(bBytes, isUnsigned: true, isBigEndian: false);
-
-            BigInteger decrypted = DecryptBlock(a, b, p, x);
-
-            // Оставляем только младший байт (так как мы шифровали по одному байту)
-            byte decryptedByte = (byte)(decrypted & 0xFF);
-            await outputStream.WriteAsync(new[] { decryptedByte });
+                BigInteger decrypted = DecryptBlock(a, b, p, x);
+                byte decryptedByte = (byte)(decrypted & 0xFF);
+                await outputStream.WriteAsync(new[] { decryptedByte });
+            }
         }
-    }
 
-    private BigInteger DecryptBlock(BigInteger a, BigInteger b, BigInteger p, BigInteger x)
-    {
-        // s = a^x mod p
-        BigInteger s = MathEngine.FastPow(a, x, p);
+        private int GetPaddedSize(BigInteger p)
+        {
+            return (int)((p.GetBitLength() + 7) / 8);
+        }
 
-        // s^-1 mod p
-        BigInteger sInverse = MathEngine.ModInverse(s, p);
-
-        // m = (b * s^-1) mod p
-        return (b * sInverse) % p;
-    }
-
-    private int GetPaddedSize(BigInteger p)
-    {
-        return (int)((p.GetBitLength() + 7) / 8);
+        private BigInteger DecryptBlock(BigInteger a, BigInteger b, BigInteger p, BigInteger x)
+        {
+            BigInteger s = MathEngine.FastPow(a, x, p);
+            BigInteger sInverse = MathEngine.ModInverse(s, p);
+            return (b * sInverse) % p;
+        }
     }
 }

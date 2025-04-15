@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TIThird")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c15765bf70a3dbc41acd3e03c22ee61eab523779")]
 [assembly: System.Reflection.AssemblyProductAttribute("TIThird")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TIThird")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
